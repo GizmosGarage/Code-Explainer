@@ -1,0 +1,48 @@
+{
+  "name": "codewise-tutor",
+  "private": true,
+  "version": "1.0.0",
+  "description": "An adaptive tutor that teaches Python and Arduino code line by line.",
+  "type": "module",
+  "packageManager": "pnpm@11.19.0",
+  "engines": {
+    "node": ">=20"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/GizmosGarage/Code-Explainer.git"
+  },
+  "bugs": {
+    "url": "https://github.com/GizmosGarage/Code-Explainer/issues"
+  },
+  "homepage": "https://github.com/GizmosGarage/Code-Explainer#readme",
+  "keywords": ["education", "python", "arduino", "ai-tutor", "code-explainer"],
+  "scripts": {
+    "dev": "concurrently -k -n WEB,API -c cyan,magenta \"vite\" \"tsx watch server/index.ts\"",
+    "build": "tsc -b && vite build",
+    "start": "tsx server/index.ts",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "cors": "2.8.6",
+    "express": "5.2.1",
+    "lucide-react": "1.34.0",
+    "openai": "7.5.0",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "zod": "4.4.3"
+  },
+  "devDependencies": {
+    "@types/cors": "2.8.19",
+    "@types/express": "5.0.6",
+    "@types/node": "26.3.0",
+    "@types/react": "19.2.18",
+    "@types/react-dom": "19.2.5",
+    "@vitejs/plugin-react": "6.1.0",
+    "concurrently": "10.0.5",
+    "tsx": "4.23.12",
+    "typescript": "7.0.2",
+    "vite": "8.2.2",
+    "vitest": "4.1.11"
+  }
+}
